@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<audio id="bgmusic" loop>
+  <audio id="bgmusic" loop>
   <source src="bg.mp3" type="audio/mpeg">
 </audio>
-<script>
-document.addEventListener('click', () => {
-  document.getElementById('bgmusic').play();
-}, { once: true });
-</script>
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -335,7 +330,11 @@ svg text{font-family:system-ui,sans-serif}
 </svg>
 </div>
 
+
 <script>
+  document.addEventListener('click', () => {
+  document.getElementById('bgmusic').play();
+}, { once: true });
 function tip(e, name, dates, note) {
   const tt = document.getElementById('tt');
   tt.innerHTML = '<strong>' + name + '</strong><div class="dt">' + dates + '</div><div>' + note + '</div>';
